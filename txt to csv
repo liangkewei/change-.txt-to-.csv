@@ -1,0 +1,38 @@
+import pandas as pd
+data0=[]
+data1=[]
+data2=[]
+data3=[]
+data4=[]
+data5=[]
+data6=[]
+data7=[]
+data8=[]
+data9=[]
+data10=[]
+data11=[]
+data12=[]
+data13=[]
+fr=open('housing.txt','r')
+lines = fr.readlines()
+for line in lines:
+    items = line.strip().split()
+    data0.append(items[0])
+    data1.append(items[1])
+    data2.append(items[2])
+    data3.append(items[3])
+    data4.append(items[4])
+    data5.append(items[5])
+    data6.append(items[6])
+    data7.append(items[7])
+    data8.append(items[8])
+    data9.append(items[9])
+    data10.append(items[10])
+    data11.append(items[11])
+    data12.append(items[12])
+    data13.append(items[13])
+
+print(data1)
+print(data2)
+dataframe=pd.DataFrame({'CRIM':data0,'ZN':data1,'INDUS':data2,'CHAS':data3,"NOX":data4,'RM':data5,'AGM':data6,"DIS":data7,'RAD':data8,'TAX':data9,'PTRATIO':data10,'X':data11,'LSTAT':data12,'MEDV':data13})
+dataframe.to_csv("test.csv")
