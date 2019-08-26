@@ -1,0 +1,14 @@
+import numpy as np
+fr=open('右手 沉取 尺脉 20190826 135510.txt','r')
+lines = fr.readlines()
+list=[]
+for line in lines:
+    items = line.strip().split()
+
+for i in  range(len(items)):
+    list.append(int(items[i]))
+print(list)
+c=list[0]
+print(type(c))
+print(type(list))
+print(np.mean(list))
